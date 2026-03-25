@@ -62,7 +62,7 @@ Project Structure
 └── README.md
 
 Installation-
-git clone https://github.com/your-username/pdf-chatbot.git
+git clone https://github.com/sagarlagare/pdf-chatbot.git
 cd pdf-chatbot
 pip install -r requirements.txt
 GROQ_API_KEY=your_groq_api_key_here
