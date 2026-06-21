@@ -1,15 +1,14 @@
-# Use a lightweight Python image
-FROM python:3.9-slim
+FROM python:3.11-slim
 
-# Set the working directory inside the container
 WORKDIR /app
 
-# Copy requirements first (for better caching)
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy your python script(s)
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
 COPY . .
 
-# Command to run your app
-CMD ["python", "app.py"]
+EXPOSE 8501
+
+CMD ["streamlit","run","app.py","--server.address=0.0.0.0","--server.port=8501"]

@@ -3,4 +3,5 @@ myenv/
 __pycache__/
 *.pdf
 .git/
-.envc
+.env
+faiss_index/
